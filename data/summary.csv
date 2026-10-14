@@ -1,0 +1,12 @@
+check,result,base
+Sites that block OAI-SearchBot or ChatGPT-User,0,184 reachable CPA firm websites
+Sites that block GPTBot (OpenAI training),25,184 reachable CPA firm websites
+Sites that block PerplexityBot (Perplexity search),24,184 reachable CPA firm websites
+Home page empty without JavaScript,3,184 reachable CPA firm websites
+No structured data naming the firm,82,184 reachable CPA firm websites
+Accounting AI Overviews citing Yelp,15,25 Google AI Overviews with sources (20 US cities)
+Accounting AI Overviews citing Google business listings,10,25 Google AI Overviews with sources (20 US cities)
+Median reviews of firms named by Google's AI,85,17 firms named with rating and review count
+Median Google reviews across the sample,30,200 CPA firms from Google Maps
+Agent AI Overviews citing Google business listings,13,15 Google AI Overviews with sources
+Agent AI Overviews citing RealTrends,7,15 Google AI Overviews with sources
