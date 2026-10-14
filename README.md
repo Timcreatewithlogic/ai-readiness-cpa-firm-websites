@@ -5,7 +5,7 @@ Full write-up with context and sources: **https://createwithlogic.com/ai-readine
 
 ## What we checked
 
-On October 13, 2026 we pulled CPA firms with a website from Google Maps in Austin, Dallas, Houston, Miami, Atlanta, Charlotte, Phoenix, Denver, Nashville and Seattle: 200 unique websites, 184 of which answered normally.
+On October 13, 2026 we pulled CPA firms with a website from Google Maps in Austin, Dallas, Houston, Miami, Atlanta, Charlotte, Phoenix, Denver, Nashville and Seattle: 200 unique websites, 184 of them reachable.
 
 For each site we:
 
@@ -13,7 +13,7 @@ For each site we:
 2. loaded the home page without running JavaScript and counted the visible words,
 3. looked for structured data (JSON-LD) that names the firm as an organization or local business.
 
-Pages with almost no text were loaded again in a real browser to see what JavaScript adds.
+We loaded pages with almost no text again in a real browser to see what JavaScript adds.
 
 ## Results (184 reachable sites)
 
@@ -27,21 +27,21 @@ Pages with almost no text were loaded again in a real browser to see what JavaSc
 
 Per crawler: [`data/robots_txt_blocks_by_crawler.csv`](data/robots_txt_blocks_by_crawler.csv)
 
-**ChatGPT is allowed in everywhere.** None of the 184 sites blocked OAI-SearchBot (the crawler OpenAI documents for surfacing websites in ChatGPT search) or ChatGPT-User (which opens pages for a user). Blocking GPTBot is a separate choice about model training and does not take a firm out of ChatGPT search.
+**ChatGPT is allowed in everywhere.** None of the 184 sites blocked OAI-SearchBot (the crawler OpenAI documents for surfacing websites in ChatGPT search) or ChatGPT-User (which opens pages for a user). Blocking GPTBot is a separate choice about model training. A firm can block GPTBot and still show up in ChatGPT search.
 
-**One in eight sites is closed to Perplexity search.** All 24 sites that disallow PerplexityBot run on the same website platform for accounting firms and share one robots.txt. It lists the crawlers it allows and ends with a rule that blocks every crawler not on the list. PerplexityBot is not on the list. The fix is two lines in robots.txt, which the platform has to make or allow.
+**One in eight sites is closed to Perplexity search.** All 24 sites that disallow PerplexityBot run on the same website platform for accounting firms and share one robots.txt. It lists the crawlers it allows and ends with a rule that blocks every crawler not on the list. PerplexityBot is not on the list. Two lines in robots.txt fix it, and the platform has to add them or let the firm do so.
 
-**Three home pages are blank to AI crawlers.** They show no text without JavaScript but 300 to 550 words in a browser. Vercel and MERJ reported on December 17, 2024 that none of the major AI crawlers render JavaScript.
+**Three home pages are blank to AI crawlers.** They show no text without JavaScript and 300 to 550 words in a browser. Vercel and MERJ reported on December 17, 2024 that none of the major AI crawlers render JavaScript.
 
 ## What Google's AI cites for "best CPA in [city]"
 
 The same day we asked Google, from the US, "best accountant for small business in [city]" and "best CPA firm in [city]" for 20 large US cities and collected the AI Overviews: 32 answers, 25 with sources. Counts: [`data/ai_overview_sources.csv`](data/ai_overview_sources.csv)
 
-- Yelp's search page for the city was cited in 15 of 25 (60%), Google's own business listings in 10 (40%).
-- The 17 firms named with a rating and a review count had a median of 85 reviews at 4.9 stars. The median across all 200 firms in the sample was 30 Google reviews.
-- For "best real estate agent in [city]" (15 AI Overviews with sources), Google's business listings were cited in 13 and RealTrends rankings in 7.
+- Google cited Yelp's search page for the city in 15 of 25 (60%) and its own business listings in 10 (40%).
+- The 17 firms Google's AI named with a rating and a review count had a median of 85 reviews at 4.9 stars. The median across all 200 firms in the sample was 30 Google reviews.
+- For "best real estate agent in [city]" (15 AI Overviews with sources), Google cited its own business listings in 13 and RealTrends rankings in 7.
 
-These are small samples from one day and one engine. Treat the shares as direction. The website checks are deterministic and can be repeated.
+These are small samples from one day and one engine, so read the shares as a direction. The website checks follow fixed rules, and anyone can repeat them.
 
 ## Check your own site
 
