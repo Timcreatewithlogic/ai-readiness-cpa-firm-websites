@@ -56,6 +56,8 @@ The script loads your home page once without JavaScript, says whether a firewall
 
 Or by hand: open `yourdomain.com/robots.txt`. If it ends with `User-agent: *` and `Disallow: /`, check that PerplexityBot, OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, bingbot and Googlebot are named above that line.
 
+Without installing anything: paste your robots.txt into the free [AI crawler checker](https://createwithlogic.com/ai-crawler-checker). It reads the file the same way, in your browser, and shows the line that decides for each crawler.
+
 ## Free webinar, October 22, 2026
 
 Free live webinar on Thursday, October 22, 2026, 12:00 PM ET, for US accountants, CPA and tax firms and real estate agents: how ChatGPT and other AI search tools decide which firms to recommend, and how a firm gets found there. Every registered firm gets this check and an AI answer check before the session.
