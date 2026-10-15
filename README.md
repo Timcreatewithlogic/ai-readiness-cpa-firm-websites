@@ -31,7 +31,7 @@ Per crawler: [`data/robots_txt_blocks_by_crawler.csv`](data/robots_txt_blocks_by
 
 **One in eight sites is closed to Perplexity search.** All 24 sites that disallow PerplexityBot run on the same website platform for accounting firms and share one robots.txt. It lists the crawlers it allows and ends with a rule that blocks every crawler not on the list. PerplexityBot is not on the list. Two lines in robots.txt fix it, and the platform has to add them or let the firm do so.
 
-**Three home pages are blank to AI crawlers.** They show no text without JavaScript and 300 to 550 words in a browser. Vercel and MERJ reported on December 17, 2024 that none of the major AI crawlers render JavaScript.
+**Three home pages are blank without JavaScript.** They show no text without JavaScript and 300 to 550 words in a browser. Vercel and MERJ reported on December 17, 2024 that none of the major AI crawlers rendered JavaScript. In our own server logs on October 14, 2026, OpenAI's search crawler ran the JavaScript on 4 of the 7 pages it fetched, and ChatGPT-User, PerplexityBot and GPTBot showed no sign of it ([details and raw data](https://createwithlogic.com/do-ai-crawlers-render-javascript)).
 
 ## What Google's AI cites for "best CPA in [city]"
 
