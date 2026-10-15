@@ -13,7 +13,7 @@ For each site we:
 2. loaded the home page without running JavaScript and counted the visible words,
 3. looked for structured data (JSON-LD) that names the firm as an organization or local business.
 
-We loaded pages with almost no text again in a real browser to see what JavaScript adds.
+We loaded pages with almost no text again in a real browser to see what JavaScript adds. On October 14, 2026 we read the 184 robots.txt files again with a parser that follows the robots.txt standard, RFC 9309 ([Protego](https://github.com/scrapy/protego)), with the same counts for all seven crawlers.
 
 ## Results (184 reachable sites)
 
@@ -43,13 +43,16 @@ The same day we asked Google, from the US, "best accountant for small business i
 
 These are small samples from one day and one engine, so read the shares as a direction. The website checks follow fixed rules, and anyone can repeat them.
 
+Same method for 197 US real estate agent websites (October 14, 2026): https://github.com/Timcreatewithlogic/ai-readiness-real-estate-agent-websites. There, 23 of 189 checked sites (12%) turned a request without JavaScript away, most of them with a Cloudflare check page, against 13 of 200 CPA firm websites (6.5%) a day earlier.
+
 ## Check your own site
 
 ```bash
+pip install protego   # optional: reads robots.txt per RFC 9309, as Google and Bing do
 python3 scan/check_site.py https://www.yourfirm.com
 ```
 
-The script reads your robots.txt for the AI and search crawlers listed above (plus Perplexity-User, Claude-SearchBot, Claude-User and Google-Extended), counts the words on your home page without JavaScript and lists the JSON-LD types it finds. It sends two GET requests, nothing else.
+The script loads your home page once without JavaScript, says whether a firewall turned the request away, reads your robots.txt for the AI and search crawlers listed above (plus Perplexity-User, Claude-SearchBot, Claude-User and Google-Extended), counts the words a crawler sees and lists the JSON-LD types it finds. It sends two GET requests, nothing else.
 
 Or by hand: open `yourdomain.com/robots.txt`. If it ends with `User-agent: *` and `Disallow: /`, check that PerplexityBot, OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, bingbot and Googlebot are named above that line.
 
@@ -58,7 +61,7 @@ Or by hand: open `yourdomain.com/robots.txt`. If it ends with `User-agent: *` an
 Free live webinar on Thursday, October 22, 2026, 12:00 PM ET, for US accountants, CPA and tax firms and real estate agents: how ChatGPT and other AI search tools decide which firms to recommend, and how a firm gets found there. Every registered firm gets this check and an AI answer check before the session.
 Details and registration: **https://createwithlogic.com/ai-visibility-webinar**
 
-More: [How to get your business recommended by ChatGPT: the 2026 data](https://createwithlogic.com/how-to-get-recommended-by-chatgpt) · [AI visibility for accounting firms](https://createwithlogic.com/ai-visibility-for-accounting-firms)
+More: [How to get your business recommended by ChatGPT: the 2026 data](https://createwithlogic.com/how-to-get-recommended-by-chatgpt) · [AI visibility for accounting firms](https://createwithlogic.com/ai-visibility-for-accounting-firms) · [GEO for accounting firms, explained with data](https://createwithlogic.com/geo-for-accounting-firms)
 
 ## Sources
 
@@ -67,6 +70,7 @@ More: [How to get your business recommended by ChatGPT: the 2026 data](https://c
 - Anthropic: how Anthropic crawls the web (ClaudeBot, Claude-User, Claude-SearchBot): https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler
 - Vercel: The rise of the AI crawler, December 17, 2024: https://vercel.com/blog/the-rise-of-the-ai-crawler
 - BrightLocal: AI directory sources, 60,970 checks, August 26, 2026: https://www.brightlocal.com/resources/ai-directory-sources/
+- IETF: RFC 9309, Robots Exclusion Protocol, September 2022: https://www.rfc-editor.org/rfc/rfc9309
 
 ## License
 
