@@ -23,9 +23,11 @@ We loaded pages with almost no text again in a real browser to see what JavaScri
 | Sites that block GPTBot (OpenAI training) | 25 of 184 (13.6%) |
 | Sites that block PerplexityBot (Perplexity search) | 24 of 184 (13.0%), all on one platform |
 | Home page empty without JavaScript | 3 of 184 (1.6%) |
-| No structured data naming the firm | 82 of 184 (45%) |
+| No structured data naming the firm | 65 of 184 (35%), corrected October 15, 2026 |
 
 Per crawler: [`data/robots_txt_blocks_by_crawler.csv`](data/robots_txt_blocks_by_crawler.csv)
+
+**Correction, October 15, 2026.** Our first count read the JSON-LD `@type` only when it was a single string, as in `"@type": "AccountingService"`, and checked only the first eight types of a page in alphabetical order. It missed types written as a list, such as `"@type": ["AccountingService", "LocalBusiness"]`. On October 15 we loaded the 82 sites counted without such markup again, one request per site: 17 name the firm in a list of types. Every type we had stored for them was still there two days after the first count, so we read the difference as an error in our count, not as changes to the sites. The one site we could not load again stays as first counted. Corrected result: 65 of 184 (35%) instead of 82 (45%). `scan/check_site.py` reads both forms since then.
 
 **ChatGPT is allowed in everywhere.** None of the 184 sites blocked OAI-SearchBot (the crawler OpenAI documents for surfacing websites in ChatGPT search) or ChatGPT-User (which opens pages for a user). Blocking GPTBot is a separate choice about model training. A firm can block GPTBot and still show up in ChatGPT search.
 
