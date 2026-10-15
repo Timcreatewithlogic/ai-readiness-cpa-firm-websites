@@ -58,12 +58,14 @@ Or by hand: open `yourdomain.com/robots.txt`. If it ends with `User-agent: *` an
 
 Without installing anything: paste your robots.txt into the free [AI crawler checker](https://createwithlogic.com/ai-crawler-checker). It reads the file the same way, in your browser, and shows the line that decides for each crawler.
 
+For the rest of the picture, what ChatGPT, Gemini and Perplexity answer for your city and what your Google profile shows, there is a free [AI visibility check](https://createwithlogic.com/free-ai-visibility-check) by email.
+
 ## Free webinar, October 22, 2026
 
 Free live webinar on Thursday, October 22, 2026, 12:00 PM ET, for US accountants, CPA and tax firms and real estate agents: how ChatGPT and other AI search tools decide which firms to recommend, and how a firm gets found there. Every registered firm gets this check and an AI answer check before the session.
 Details and registration: **https://createwithlogic.com/ai-visibility-webinar**
 
-More: [How to get your business recommended by ChatGPT: the 2026 data](https://createwithlogic.com/how-to-get-recommended-by-chatgpt) · [AI visibility for accounting firms](https://createwithlogic.com/ai-visibility-for-accounting-firms) · [GEO for accounting firms, explained with data](https://createwithlogic.com/geo-for-accounting-firms)
+More: [How to get your business recommended by ChatGPT: the 2026 data](https://createwithlogic.com/how-to-get-recommended-by-chatgpt) · [AI visibility for accounting firms](https://createwithlogic.com/ai-visibility-for-accounting-firms) · [GEO for accounting firms, explained with data](https://createwithlogic.com/geo-for-accounting-firms) · [The AI visibility audit for accounting firms](https://createwithlogic.com/ai-visibility-audit)
 
 ## Sources
 
